@@ -1,3 +1,4 @@
+import React from "react"
 import { useState } from "react";
 import InputCidades from "../components/InputCidades";
 import InputEstados from "../components/InputEstados";
