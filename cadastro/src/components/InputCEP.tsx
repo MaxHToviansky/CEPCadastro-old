@@ -48,6 +48,12 @@ export default function () {
                     }
                 }/>
             </div>
+            <div>
+                {loading
+                    ?   "Carregando CEP"
+                    :   ""
+                }
+            </div>
     
     </>
     // Boa parte desse codigo veio do Tiago, mas consigo explicar como tudo funciona.

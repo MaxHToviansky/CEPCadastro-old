@@ -1,13 +1,12 @@
 import React from "react"
 import { useEffect, useState } from "react"
+import { FormEnderecoContext } from "../pages/FormEnderecoContext"
 
-type props = {
-    uf: string
-}
-
-export default function ({ uf }: props) {
-    const [cidades, setCidades] = useState([])
+export default function () {
+    const {uf, setUf, cidade, setCidade} = React.useContext(FormEnderecoContext)
     const [loading, setLoading] = useState(true)
+    const [cidades, setCidades] = useState([])
+    
 
     async function buscarCidades() {
         setLoading(true)
@@ -16,6 +15,7 @@ export default function ({ uf }: props) {
         const cidades = await requestCidades.json()
         setLoading(false)
         setCidades(cidades)
+        
     }
 
     useEffect(() => {
